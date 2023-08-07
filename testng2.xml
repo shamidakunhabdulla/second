@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="url" value="https://www.swiggy.com/"/>
+  <!--<test thread-count="5" name="Test">
+    <classes>
+      <class name="ecommerce.Card"/>
+    </classes>
+  </test> -->
+  <test name="Product">
+	  <classes>
+		  <class name="ecommerce.Product"><methods>
+			  <exclude name="laptop"/>
+		  </methods></class>
+	  </classes>
+  </test>
+  <test name="Card">
+	  <classes>
+		  <class name="ecommerce.Card"><methods>
+			  <include name="giftcard"/>
+		  </methods></class>
+	  </classes>
+  </test>
+</suite> <!-- Suite -->
